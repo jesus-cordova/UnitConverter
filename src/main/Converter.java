@@ -17,6 +17,11 @@ public class Converter {
 				menuSelection = myScanner.nextInt();
 				if (menuSelection == 4)
 					break;
+				if (menuSelection < 1 | menuSelection > 4)
+				{
+					System.out.println("Please enter a number 1-4");
+					continue;
+				}
 				promptQuantity();
 				quantity = myScanner.nextDouble();
 				collectInput(menuSelection, quantity);
@@ -50,7 +55,6 @@ public class Converter {
 			break;
 		case 3:
 			convertGallonsToImperialGallons(quantity);
-			break;
 
 		}
 	}
